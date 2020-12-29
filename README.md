@@ -1,5 +1,7 @@
 # prometheus-cloudwatch-federator-rs
 
+Federate your prometheus metrics into CloudWatch custom metrics using with [Federation](https://prometheus.io/docs/prometheus/latest/federation/) feature.
+
 ## Usage
 
 ```
@@ -13,3 +15,8 @@ AWS_ACCESS_KEY_ID="..." AWS_SECRET_ACCESS_KEY="..." CLOUDWATCH_NAMESPACE="Promet
     - must be urlencoded
 - CLOUDWATCH_NAMESPACE
     - default: Prometheus
+
+
+## Limitation
+
+[Histograms and summaries](https://prometheus.io/docs/practices/histograms/) are not supported.
