@@ -16,7 +16,11 @@ AWS_ACCESS_KEY_ID="..." AWS_SECRET_ACCESS_KEY="..." CLOUDWATCH_NAMESPACE="Promet
 - CLOUDWATCH_NAMESPACE
     - default: Prometheus
 
+### IAM
 
-## Limitation
+- allow `cloudwatch:PutMetricData`
 
-[Histograms and summaries](https://prometheus.io/docs/practices/histograms/) are not supported.
+## Limitations
+
+- [Histograms and summaries](https://prometheus.io/docs/practices/histograms/) are not supported
+- More than 10 labels will be truncated due to [CloudWatch Cusutom Metrics dimension limitation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_Dimension.html)

@@ -94,7 +94,7 @@ mod tests {
     use std::io::{BufRead, BufReader};
 
     #[test]
-    fn test_labels_to_dimentions() {
+    fn test_labels_to_dimensions() {
         let scrape = r#"
 metrics{a="1",b=""} 1 1
 metrics{a="1",b="2",c="3",d="4",e="5",f="6",g="7",h="8",i="9",j="10",k="11"} 1 1
